@@ -3,9 +3,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
+// import mui css for styling
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
+
 export const metadata: Metadata = {
-  title: "Jose's Bar and Grill",
-  description: "Jose's Bar and Grill",
+  title: "Legend Has It",
+  description: "Legend Has It",
 };
 
 export default function RootLayout({
@@ -15,7 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
+      </body>
     </html>
   );
 }

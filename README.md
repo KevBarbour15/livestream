@@ -45,3 +45,7 @@
 	•	Users visit the homepage.
 	•	If a livestream is active, they see the live broadcast.
 	•	If no livestream is active, they can browse and play previous recordings.
+
+
+
+### using kinde for auth

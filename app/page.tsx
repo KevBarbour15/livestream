@@ -1,7 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
 
-import { getVodSource } from "./get-source";
+import { getVodSource } from "./util/get-source";
 
 export default function HomePage() {
   const [assets, setAssets] = useState([]);
@@ -27,7 +29,7 @@ export default function HomePage() {
       }
     }
 
-    fetchAssets();
+    //fetchAssets();
   }, []);
 
   useEffect(() => {
@@ -42,7 +44,8 @@ export default function HomePage() {
 
   return (
     <div>
-      <h1>Recorded Streams</h1>
+      <h1>Legend Has It</h1>
+      <LoginLink postLoginRedirectURL="/dashboard">Sign in</LoginLink>
     </div>
   );
 }
